@@ -12,12 +12,12 @@ export const typeDefs=`
     posts:[Post!]
     }
     type Stat{
-      followerCount:Int
-      followingCount:Int
-      heart:Int
-      heartCount:Int
-      videoCount:Int
-      diggCount:Int
+      followerCount:String
+      followingCount:String
+      heart:String
+      heartCount:String
+      videoCount:String
+      diggCount:String
     }
     type Follower{
       name:String #nickname
@@ -30,11 +30,11 @@ export const typeDefs=`
     type Post{
       desc:String #desc
       id:String
-      playCount:Int
-      commentCount:Int
-      shareCount:Int
-      collectCount:Int
-      diggCount:Int
+      playCount:String
+      commentCount:String
+      shareCount:String
+      collectCount:String
+      diggCount:String
       comments:[Comment!]
     }
     type Comment{
@@ -43,7 +43,5 @@ export const typeDefs=`
     }
     type Query{
       user(uniqueId:String!):User,
-      followers(secUid:String!):[Follower!]
-      login(email:String,password:String):String
     }
 `

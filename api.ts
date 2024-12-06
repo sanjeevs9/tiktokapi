@@ -1,2 +1,2 @@
-export const RAPID_KEY= "cdbd54931dmsh6f8fd2a4d2ce204p181d03jsn0fae844e44da"
+export const RAPID_KEY= "b946b61384msh4c0466f019b4704p1b7fc6jsn9f9bee8546b5"
 export const TIKTOK="https://tiktok-api23.p.rapidapi.com/api"

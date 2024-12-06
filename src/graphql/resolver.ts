@@ -2,8 +2,8 @@ import { UserDetail,FetchFollowers,FetchFollowing,FetchPosts } from '../api';
 
 export const QUERY={Query:{
     user:async(_: any,args:{uniqueId:string})=> User(args) ,
-    followers:async (_: any,args:{secUid:string})=> Follower(args) ,
-    login:async (_: any,args:{email:string,password:string},context: any)=>{}
+    // followers:async (_: any,args:{secUid:string})=> Follower(args) ,
+    // login:async (_: any,args:{email:string,password:string},context: any)=>{}
     },
   User:{
     followers:async(parent: { secUid: string; })=>{
@@ -20,10 +20,10 @@ export const QUERY={Query:{
 
 //fetch data from the api
 async function User(args:{uniqueId:string}){
-    try{                  
-        //user details
-        let response=await UserDetail(args); 
+    try{             
         
+        //user details
+        let response=await UserDetail(args);         
         const user=response.data.userInfo.user;
         const stats=response.data.userInfo.stats;
         const secUid=user.secUid;
@@ -43,7 +43,9 @@ async function User(args:{uniqueId:string}){
         response=await FetchFollowing(secUid);
         const followingList=response.data;
         let following=[]
-        if(followingList.total!=0){
+        console.log({followingList})
+        
+        if(followingList.total && followingList.total!=0){
             following=followingList.userList.map((user:any)=>{
               return {name:user.user.nickname,avatar:user.user.avatarMedium}
           })
