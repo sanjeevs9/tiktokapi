@@ -1,0 +1,22 @@
+{
+  "name": "my-app",
+  "scripts": {
+    "dev": "wrangler dev",
+    "deploy": "wrangler deploy --minify"
+  },
+  "dependencies": {
+    "@graphql-yoga/common": "^3.9.1",
+    "@graphql-yoga/node": "^3.9.1",
+    "axios": "^1.7.9",
+    "cookie": "^1.0.2",
+    "dotenv": "^16.4.7",
+    "env": "^0.0.2",
+    "graphql": "^16.9.0",
+    "hono": "^4.6.12"
+  },
+  "devDependencies": {
+    "@cloudflare/workers-types": "^4.20241112.0",
+    "@types/graphql": "^14.2.3",
+    "wrangler": "^3.88.0"
+  }
+}

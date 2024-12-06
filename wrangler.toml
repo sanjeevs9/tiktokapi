@@ -1,0 +1,29 @@
+name = "my-app"
+main = "src/index.ts"
+compatibility_date = "2024-12-04"
+
+# compatibility_flags = [ "nodejs_compat" ]
+
+[vars]
+RAPID_KEY= "19c794a052msha85471519a24d74p11be14jsn98af2b219fe5"
+# MY_VAR = "my-variable"
+
+# [[kv_namespaces]]
+# binding = "MY_KV_NAMESPACE"
+# id = "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"
+
+# [[r2_buckets]]
+# binding = "MY_BUCKET"
+# bucket_name = "my-bucket"
+
+# [[d1_databases]]
+# binding = "DB"
+# database_name = "my-database"
+# database_id = ""
+
+# [ai]
+# binding = "AI"
+
+# [observability]
+# enabled = true
+# head_sampling_rate = 1
