@@ -39,6 +39,11 @@ npm run dev
 ```
 npm run deploy
 ```
+6.Create api.ts
+
+export const RAPID_KEY= "Your rapid api key" 
+
+export const TIKTOK="https://tiktok-api23.p.rapidapi.com/api"
 
 ## 📁 Project Structure
 ```
